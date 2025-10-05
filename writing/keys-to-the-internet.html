@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <title>Keys to the internet — Nishant Hooda</title>
+</head>
+<body>
+  <h1>Keys to the internet</h1>
+  
+  <p>
+    <a href="../index.html">← back</a>
+  </p>
+  
+  <hr>
+  
+  <p><small>October 6, 2025</small></p>
+  
+  <p>Boris and I have spent the last 3 months learning everything there is to know about browser agents. They've gotten quite good - much better than I would have expected them to be when first starting out. If this is just the start, it makes me wonder whether humans will even need to surf the web in the future. Here, I want to explore the need for both agents and humans to live on the web harmoniously and what the framework for them to do so might be.</p>
+
+  <p>To start, let's cover a few reasons why humans would still want to use the internet directly - moments where being present matters. These are emotion-driven interactions, where the value comes from human engagement, rather than just information exchange.</p>
+  
+  <ul>
+    <li>Browsing Wikipedia rabbit holes</li>
+    <li>Twitch streamer reacting live to their community's jokes and inside references</li>
+    <li>Commenting on your friend's Instagram wedding post</li>
+    <li>Contributing to a meme chain on Reddit where each person builds on the joke</li>
+  </ul>
+
+  <p>Next, let's go a step deeper: situations where an agent could fetch the content for you, but the human author's credibility and voice are still the source of value. These are authenticity-based interactions, where reputation and exclusivity make the difference.</p>
+
+  <ul>
+    <li>A journalist on Substack where readers subscribe for their voice, not just the topic</li>
+    <li>A friend's travel blog where you know every photo and story is from them, not an AI</li>
+    <li>YouTube videos where the creator's reputation is tied to name, like MKBHD</li>
+    <li>LinkedIn posts where a known founder shares their company's hard-learned lessons</li>
+  </ul>
+
+  <p>Finally, let's go deep into agent land - places where agents aren't just helpful, but where they'll almost certainly dominate. These are utility-driven interactions, where the primary value is efficiency, breadth, or precision, not human presence.</p>
+  
+  <ul>
+    <li>Price comparison across dozens of travel websites to find the cheapest flight</li>
+    <li>Automated research on a niche topic, pulling together dozens of sources</li>
+    <li>Filling out government forms or handling tax paperwork without human tedium</li>
+    <li>Running QA tests on a website or app to spot broken flows before users do</li>
+  </ul>
+
+  <p>Together, these three categories form a spectrum of how humans and agents interact with the web - from direct human experience, to mediated authenticity, to fully automated execution.</p>
+
+  <h3>Authenticity-driven interactions</h3>
+
+  <p>The most interesting use case of these 3 is the authenticity-driven interactions because that is where the agent-human relationship is least defined. The shift towards AI is clear: it's more common to ask chatGPT a question, than finding answers directly from a source on the web. Which poses the first big question:</p>
+
+  <p><strong>Should agents be allowed to index the web? If indexed, should the original author be compensated?</strong></p>
+
+  <p>Companies like Perplexity have already come <a href="https://techcrunch.com/2025/08/04/perplexity-accused-of-scraping-websites-that-explicitly-blocked-ai-scraping/">under fire</a> for scraping websites that had explicitly opted out of AI access through the long-standing <a href="https://www.robotstxt.org/robotstxt.html">robots.txt</a> convention. The obvious flaw with this standard is that compliance is purely voluntary, so if there's economic upside to ignoring it, someone eventually will.</p>
+
+  <p>The other "default" defense of the authenticity-driven web has been CAPTCHAs, but those haven't meaningfully evolved in over a decade. Today, they can often be bypassed, simply by running requests through a residential IP alongside a decent computer-use agent. This is a problem on its own, and a space that feels ripe for innovation.</p>
+
+  <p>Cloudflare is experimenting with a new <a href="https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/">approach</a>: a marketplace where scraping agents must pay to access content. On paper, it sounds elegant - align incentives by turning monetizing data access. But in practice, this model runs into a few problems:</p>
+
+  <ul>
+    <li><strong>Piracy risk.</strong> Once a piece of content leaves the paywall, it's vulnerable to piracy. You can charge for the first scrape, but can't prevent the infinite free distribution afterwards.</li>
+    <li><strong>Weak incentives for high-value content.</strong> The most unique or differentiated content (investigative journalism, exclusive research, niche communities) can often monetize better elsewhere - via subscriptions, sponsorships, or direct community support, rather than participating in a shared scraping pool.</li>
+    <li><strong>The opt-out paradox.</strong> Even if enough sites join such a marketplace to make it viable; there are incentivizes to stay outside it. If your site is the only open source on a particular topic, it becomes disproportionately valuable.</li>
+  </ul>
+
+  <p>Taken together, this suggests the problem of compensating authenticity on the internet is not just technical, but deeply game-theoretic. You can't simply bolt on a marketplace or a standard; you need mechanisms that resist leakage, respect author intent, and balance the incentives of publishers, users, and agents alike. Then,</p>
+
+  <p><strong>Should the agent retrieve the information and simply surface it on the website?</strong></p>
+
+  <p>Ok so, the marketplace is likely a no-go. Instead of trying to meter every scrape, maybe the more natural evolution is that agents themselves become skilled navigators of the existing web. Rather than replacing websites with paid gateways, agents could do the heavy lifting of finding the right place, parsing the noise, and surfacing the parts that matter to you.</p>
+
+  <p>We're already seeing this trend emerge. Perplexity just launched Comet, OpenAI has Operator, and Anthropic has Computer Use. All of these point toward a future where you don't manually tab-hop across 20 sources. Your agent does the hard work, and brings you back a distilled, context-aware answer directly from the source.</p>
+
+  <p>The real edge, then, isn't in building walled gardens. It's in how well agents can access and index the free and semi-free layers of the web while preserving attribution. Free information has always been the backbone of the internet, and agents will need to respect that ecosystem rather than hollow it out. The challenge becomes:</p>
+
+  <ul>
+    <li>How to ensure authenticity doesn't vanish when agents intermediate everything? If an answer comes from a journalist, a friend, or a trusted creator, the provenance of that voice must survive the retrieval process.</li>
+  </ul>
+
+  <p>Maybe this is the deeper point: browsing the web was never the ideal model - it was just the scaffolding. Humans became the browsers because we lacked good intermediaries. Now that agents are getting good enough, it's time to rethink the design.</p>
+
+  <p>The web of the future might not look like one giant marketplace of locked-down content, nor a lawless free-for-all of scraping. Instead, it could be a layered system:</p>
+
+  <ul>
+    <li>A <strong>presence layer</strong>, where human-to-human engagement thrives.</li>
+    <li>An <strong>authenticity layer</strong>, where voice and reputation are preserved from sources.</li>
+    <li>A <strong>utility layer</strong>, where agents freely fetch, index, and automate.</li>
+  </ul>
+
+  <p>Because in the age of browser agents, the real keys to the internet aren't just who gets to browse — they're who gets paid, who gets heard, and what still belongs to us as humans.</p>
+  
+  <hr>
+  
+  <p><a href="../index.html">← back</a></p>
+</body>
+</html>
