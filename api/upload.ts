@@ -14,19 +14,22 @@ export default async function handler(
     return res.status(401).send('Unauthorized');
   }
 
-  const filename = req.query.filename as string;
-  if (!filename) {
-    return res.status(400).send('Missing filename');
+  const { filename, contentType } = req.body || {};
+
+  if (!filename || !contentType) {
+    return res.status(400).send('Missing filename or contentType');
   }
 
   const blob = await put(
     `screenshots/${filename}`,
-    req,
+    null,
     {
       access: 'public',
-      contentType: req.headers['content-type'] || 'image/png',
+      contentType,
+      addRandomSuffix: false,
     }
   );
 
   res.status(200).json(blob);
 }
+
